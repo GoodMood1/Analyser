@@ -1,0 +1,84 @@
+﻿<div class="p-4">
+    <div class="container">
+        <h1 class="tC">Welcome, {{user.firstName}}!</h1>
+      <h1  class="tC" align="center">Calculator</h1>
+      <div class="calculator">
+
+        <input type="text" class="calculator-screen" [value]="currentNumber" disabled />
+
+        <div class="calculator-keys">
+
+          <button type="button" (click) = "getOperation('+')" class="operator" value="+">+</button>
+          <button type="button" (click) = "getOperation('-')" class="operator" value="-">-</button>
+          <button type="button" (click) = "getOperation('*')" class="operator" value="*">&times;</button>
+          <button type="button" (click) = "getOperation('/')" class="operator" value="/">&divide;</button>
+
+          <button type="button" (click) = "getNumber('7')" value="7">7</button>
+          <button type="button" (click) = "getNumber('8')" value="8">8</button>
+          <button type="button" (click) = "getNumber('9')" value="9">9</button>
+
+
+          <button type="button" (click) = "getNumber('4')" value="4">4</button>
+          <button type="button" (click) = "getNumber('5')" value="5">5</button>
+          <button type="button" (click) = "getNumber('6')" value="6">6</button>
+
+
+          <button type="button" (click) = "getNumber('1')" value="1">1</button>
+          <button type="button" (click) = "getNumber('2')" value="2">2</button>
+          <button type="button" (click) = "getNumber('3')" value="3">3</button>
+
+
+          <button type="button" (click) = "getNumber('0')" value="0">0</button>
+          <button type="button" (click) = "getDecimal()" class="decimal" value=".">.</button>
+          <button type="button" (click) = "clear()"  class="all-clear" value="all-clear">Cls</button>
+
+          <button type="button" (click) = "getOperation('=')" class="equal-sign" value="=">=</button>
+
+        </div>
+      </div>
+      <br>
+      <h1 class="tC" align="center">Calculate the percentage</h1>
+      <div class="calculator2">
+
+        <input type="text" class="calculator-screen3" [value]="currentNumber3" disabled />
+
+        <div class="calculator-keys2">
+          <input matInput placeholder="Sum" type="number" id="inpSum" matTooltip="Sum" #inpSum min="10">
+          <input matInput placeholder="Percent" type="number" id="inpPercent" matTooltip="Percent" #inpPercent max="100" min="1">
+          <button type="button" (click) = "clear2()"  class="all-clear2" value="all-clear">Cls</button>
+
+          <button type="button" (click) = "AmmountOfPercentage()" class="equal-sign2" value="=">=</button>
+
+        </div>
+      </div>
+      <br>
+      <h1  class="tC" align="center">Calculate the average fuel consumption per 100 km</h1>
+      <div class="calculator2">
+
+        <input type="text" class="calculator-screen2" [value]="currentNumber1" disabled />
+        <input type="text" class="calculator-screen2" [value]="currentNumber2" disabled />
+        <div class="calculator-keys2">
+          <input matInput placeholder="Used up" type="number" id="Usedup" matTooltip="Used up"  #Usedup min="0"> liters
+          <input matInput placeholder="Distance traveled" type="number" id="Distancetraveled" matTooltip="Distance traveled" #Distancetraveled min="0"> km
+          <input matInput placeholder="Fuel cost" type="number" id="Fuelcost" matTooltip="Fuel cost" #Fuelcost min="0">uah/liter
+          <button type="button" (click) = "clear3()"  class="all-clear3" value="all-clear">Cls</button>
+
+          <button type="button" (click) = "AveragefuelConsumption()" class="equal-sign3" value="=">=</button>
+
+        </div>
+      </div>
+      <br>
+      <h1 class="tC" align="center">Motivational calculator</h1>
+      <div class="calculator">
+
+        <input type="text" class="calculator-screen4" [style.background-image]="currentNumbImage" [value]="currentNumber4" disabled />
+
+        <div class="calculator-keys2">
+          Maximum weight you can lift(kg): <input matInput placeholder="Max weight" type="number" id="MaxWeight" matTooltip="MaxWeight" #MaxWeight min="1" max="1000">
+          <button type="button" (click) = "clear4()"  class="all-clear2" value="all-clear">Cls</button>
+          <button type="button" (click) = "MaxWeightLift(0)" class="equal-sign2" value="=">=</button>
+
+        </div>
+      </div>
+    </div>
+</div>
